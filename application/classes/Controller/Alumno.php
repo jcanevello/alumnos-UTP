@@ -24,8 +24,21 @@ class Controller_Alumno extends Controller {
 	
 	public function action_delete()
 	{
-		$oAlumno = ORM::factory('Alumno', $this->request->post('id'));
-		if($oAlumno->loaded()) $oAlumno->delete();
+        $oAlumno = ORM::factory('Alumno', $this->request->post('id'));
+		if($oAlumno->loaded())
+        {
+            $oAlumno->delete();
+            die(json_encode(array('status' => 'OK')));
+        }
+        die(json_encode(array('status' => 'ERROR')));
 	}
+    
+    public function action_getAlumno()
+    {
+        $oAlumno = ORM::factory('Alumno', $this->request->post('id'));
+		if($oAlumno->loaded())
+            die(json_encode(array('status' => 'OK', 'data' => $oAlumno->as_array())));
+        die(json_encode(array('status' => 'ERROR')));
+    }
 
 } // End Welcome

@@ -45,24 +45,24 @@
 						<div class="col-md-8 col-md-offset-2">
 							<form id="formulario" method="POST">
 								<div class="form-group">
-									<label for="exampleInputEmail1">Código</label>
-									<input type="text" name="codigo" class="form-control" id="exampleInputEmail1" placeholder="Código">
+									<label for="">Código</label>
+									<input type="text" name="codigo" class="form-control" id="codigo" placeholder="Código">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPassword1">Apellido Paterno</label>
-									<input type="text"  name="ape_paterno" class="form-control" id="exampleInputPassword1" placeholder="Apellido Paterno">
+									<input type="text"  name="ape_paterno" class="form-control" id="ape_paterno" placeholder="Apellido Paterno">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPassword1">Apellido Materno</label>
-									<input type="text"  name="ape_materno" class="form-control" id="exampleInputPassword1" placeholder="Apellido Materno">
+									<input type="text"  name="ape_materno" class="form-control" id="ape_materno" placeholder="Apellido Materno">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPassword1">Nombres</label>
-									<input type="text"  name="nombres" class="form-control" id="exampleInputPassword1" placeholder="Nombre">
+									<input type="text"  name="nombres" class="form-control" id="nombres" placeholder="Nombre">
 								</div>
 								<div class="form-group">
 									<label for="exampleInputPassword1">Curso</label>
-									<input type="text"  name="curso" class="form-control" id="exampleInputPassword1" placeholder="Curso">
+									<input type="text"  name="curso" class="form-control" id="curso" placeholder="Curso">
 								</div>
 								<a id="btn-save" class="col-md-12 btn btn-success">Guardar</a>
 								<input name="id" type="text" id="id" class="hide" value="">
@@ -84,15 +84,15 @@
 								</thead>
 								<tbody>
                                     <?php foreach ($aAlumno as $oAlumno): ?>
-									<tr>
+									<tr data-info="<?php echo $oAlumno->id ?>">
 										<td><?php echo $oAlumno->codigo ?></td>
 										<td><?php echo $oAlumno->ape_paterno ?></td>
 										<td><?php echo $oAlumno->ape_materno ?></td>
 										<td><?php echo $oAlumno->nombres ?></td>
 										<td><?php echo $oAlumno->curso ?></td>
 										<td>
-											<button data-id="<?php echo $oAlumno->codigo ?>" id="btn-editar" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
-											<button data-id="<?php echo $oAlumno->codigo ?>" id="btn-delete" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+											<button data-id="<?php echo $oAlumno->id ?>" type="button" class="btn btn-primary btn-editar"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button data-id="<?php echo $oAlumno->id ?>" type="button" class="btn btn-danger btn-delete"><span class="glyphicon glyphicon-trash"></span></button>
 										</td>
 									</tr>
 									<?php endforeach ?>
