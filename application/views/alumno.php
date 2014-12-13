@@ -43,7 +43,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-							<form role="form" method="POST">
+							<form id="formulario" method="POST">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Código</label>
 									<input type="text" name="codigo" class="form-control" id="exampleInputEmail1" placeholder="Código">
@@ -64,7 +64,8 @@
 									<label for="exampleInputPassword1">Curso</label>
 									<input type="text"  name="curso" class="form-control" id="exampleInputPassword1" placeholder="Curso">
 								</div>
-								<button type="submit" class="col-md-12 btn btn-success">Guardar</button>
+								<a id="btn-save" class="col-md-12 btn btn-success">Guardar</a>
+								<input name="id" type="text" id="id" class="hide" value="">
 							</form>
 						</div>
 					</div><hr>
@@ -140,5 +141,6 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="media/js/jquery-1.11.1.min.js"></script>
 	<script src="media/js/bootstrap.min.js"></script>
+	<script src="media/js/customize.js"></script>
 </body>
 </html>
