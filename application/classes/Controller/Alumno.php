@@ -4,42 +4,22 @@ class Controller_Alumno extends Controller {
 
 	public function action_index()
 	{
-        $aAlumno = ORM::factory('Alumno')->find_all();
+        $aAlumno = ORM::factory('Alumno')
+            ->order_by('id', 'DESC')
+            ->find_all();
+        
 		$view = View::factory('alumno')
             ->set('aAlumno', $aAlumno);
-		
 		$this->response->body($view);
 	}
 	
-	public function action_registro()
+	public function action_save()
 	{
-		$oAlumno = ORM::factory('Alumno');
+		$oAlumno = ORM::factory('Alumno', $this->request->post('id'));
 		$oAlumno->values($this->request->post());
-		$oAlumno->save();
-        
-        $aAlumno = ORM::factory('Alumno')
-            ->order_by('id', 'DESC')
-            ->find_all();
-		$view = View::factory('alumno')
-            ->set('aAlumno', $aAlumno);
-		
-		$this->response->body($view);
-	}
-    
-	public function action_editar()
-	{
-		$oAlumno = ORM::factory('Alumno', $this->request->param('id'));
-		$oAlumno->values($this->request->post());
-		$oAlumno->save();
-        
-        $aAlumno = ORM::factory('Alumno')
-            ->order_by('id', 'DESC')
-            ->find_all();
-        
-		$view = View::factory('alumno')
-            ->set('aAlumno', $aAlumno);
-		
-		$this->response->body($view);
+		if($oAlumno->save())
+            die(json_encode(array('status' => 'OK', 'data' => $oAlumno->as_array())));
+        die(json_encode(array('status' => 'ERROR')));
 	}
 	
 	public function action_delete()

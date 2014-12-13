@@ -189,3 +189,17 @@
 #5 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #6 D:\xampp\htdocs\alumnos-UTP\index.php(118): Kohana_Request->execute()
 #7 {main} in D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php:16
+2014-12-12 23:19:35 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: aAlumno ~ APPPATH\views\alumno.php [ 85 ] in D:\xampp\htdocs\alumnos-UTP\application\views\alumno.php:85
+2014-12-12 23:19:35 --- DEBUG: #0 D:\xampp\htdocs\alumnos-UTP\application\views\alumno.php(85): Kohana_Core::error_handler(8, 'Undefined varia...', 'D:\xampp\htdocs...', 85, Array)
+#1 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\View.php(61): include('D:\xampp\htdocs...')
+#2 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\View.php(348): Kohana_View::capture('D:\xampp\htdocs...', Array)
+#3 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Response.php(160): Kohana_View->__toString()
+#5 D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php(9): Kohana_Response->body(Object(View))
+#6 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Controller.php(84): Controller_Alumno->action_index()
+#7 [internal function]: Kohana_Controller->execute()
+#8 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Alumno))
+#9 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#10 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#11 D:\xampp\htdocs\alumnos-UTP\index.php(118): Kohana_Request->execute()
+#12 {main} in D:\xampp\htdocs\alumnos-UTP\application\views\alumno.php:85

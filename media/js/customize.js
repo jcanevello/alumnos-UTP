@@ -1,6 +1,6 @@
 $(document).ready(function($){
 	
-	/*$('#btn-save').click(function(e){
+	$('#btn-save').click(function(e){
 		
 		e.preventDefault()
 		console.log('wwww')
@@ -11,13 +11,16 @@ $(document).ready(function($){
 			data: $('#formulario').serialize(),
 			dataType: 'json'
 		}).done(function(response){
-			
-			console.log(response)
-			
+                    if(response.status == 'OK')
+                        var data = response.data
+                        
+                        $('#tabla-alumnos tbody')
+                    
+                    
 		}).fail(function(){
 			alert('Error al enviar datos')
 		})
-	})*/
+	})
 	
 	console.log('ssss')
 })

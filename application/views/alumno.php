@@ -43,7 +43,7 @@
 					</div>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
-                            <form id="formulario" action="" method="POST">
+							<form id="formulario" method="POST">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Código</label>
 									<input type="text" name="codigo" class="form-control" id="exampleInputEmail1" placeholder="Código">
@@ -64,13 +64,14 @@
 									<label for="exampleInputPassword1">Curso</label>
 									<input type="text"  name="curso" class="form-control" id="exampleInputPassword1" placeholder="Curso">
 								</div>
-                                <button type="submit" id="btn-save" class="col-md-12 btn btn-success">Guardar</button>
+								<a id="btn-save" class="col-md-12 btn btn-success">Guardar</a>
+								<input name="id" type="text" id="id" class="hide" value="">
 							</form>
 						</div>
 					</div><hr>
 					<div class="row">
 						<div class="col-md-12">
-							<table class="table table-striped">
+							<table class="table table-striped" id="tabla-alumnos">
 								<thead>
 									<tr>
 										<th>Código</th>
@@ -90,8 +91,8 @@
 										<td><?php echo $oAlumno->nombres ?></td>
 										<td><?php echo $oAlumno->curso ?></td>
 										<td>
-											<a href="alumno/editar/<?php echo $oAlumno->id ?>" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a>
-											<a href="alumno/delete/<?php echo $oAlumno->id ?>" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></a>
+											<button data-id="<?php echo $oAlumno->codigo ?>" id="btn-editar" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></button>
+											<button data-id="<?php echo $oAlumno->codigo ?>" id="btn-delete" type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
 										</td>
 									</tr>
 									<?php endforeach ?>
