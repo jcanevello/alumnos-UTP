@@ -103,7 +103,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/gestion-UTP',
+	'base_url'   => '/alumnos-UTP',
 ));
 
 /**

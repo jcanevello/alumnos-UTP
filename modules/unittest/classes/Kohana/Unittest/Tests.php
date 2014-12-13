@@ -70,7 +70,7 @@ class Kohana_Unittest_Tests {
 		
 		if ($config->use_whitelist)
 		{
-			Unittest_Tests::whitelist(NULL, $suite);
+			$files = Unittest_Tests::whitelist(NULL, $suite);
 		}
 		
 		if (count($config['blacklist']))
@@ -80,6 +80,12 @@ class Kohana_Unittest_Tests {
 
 		// Add tests
 		$files = Kohana::list_files('tests');
+		$config = Kohana::$config->load('unittest');
+		foreach($config->test_blacklist as $bl)
+		{
+			unset($files[$bl]);
+		}
+
 		self::addTests($suite, $files);
 
 		return $suite;
@@ -162,7 +168,6 @@ class Kohana_Unittest_Tests {
 		{
 			$directories = self::get_config_whitelist();
 		}
-
 		if (count($directories))
 		{
 			foreach ($directories as & $directory)
@@ -173,6 +178,8 @@ class Kohana_Unittest_Tests {
 			// Only whitelist the "top" files in the cascading filesystem
 			self::set_whitelist(Kohana::list_files('classes', $directories), $suite);
 		}
+
+		return $directories;
 	}
 
 	/**

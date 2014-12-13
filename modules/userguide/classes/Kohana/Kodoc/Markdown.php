@@ -166,8 +166,6 @@ class Kohana_Kodoc_Markdown extends MarkdownExtra_Parser {
 		{
 			$replace = array();
 
-			$replace = array();
-
 			foreach ($matches as $set)
 			{
 				list($search, $view) = $set;
@@ -180,14 +178,12 @@ class Kohana_Kodoc_Markdown extends MarkdownExtra_Parser {
 					}
 					catch (Exception $e)
 					{
-						/**
-						* Capture the exception handler output and insert it instead.
-						*
-						* NOTE: Is this really the correct way to handle an exception?
-						*/
-						$response = Kohana_exception::_handler($e);
+						ob_start();
 
-						$replace[$search] = $response->body();
+						// Capture the exception handler output and insert it instead
+						Kohana_exception::handler($e);
+
+						$replace[$search] = ob_get_clean();
 					}
 				}
 			}

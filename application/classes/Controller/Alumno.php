@@ -17,10 +17,6 @@ class Controller_Alumno extends Controller {
 		{
 			echo 'bien';
 		}
-		else
-		{
-			echo 'mal';
-		}
 		
 	}
 	
