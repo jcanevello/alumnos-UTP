@@ -152,3 +152,40 @@
 #13 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #14 D:\xampp\htdocs\alumnos-UTP\index.php(118): Kohana_Request->execute()
 #15 {main} in D:\xampp\htdocs\alumnos-UTP\modules\database\classes\kohana\database\mysql.php:75
+2014-12-12 22:51:46 --- CRITICAL: ErrorException [ 2 ]: Illegal offset type ~ SYSPATH\classes\Kohana\View.php [ 295 ] in D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\View.php:295
+2014-12-12 22:51:46 --- DEBUG: #0 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\View.php(295): Kohana_Core::error_handler(2, 'Illegal offset ...', 'D:\xampp\htdocs...', 295, Array)
+#1 D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php(9): Kohana_View->set(Object(Database_MySQL_Result))
+#2 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Controller.php(84): Controller_Alumno->action_index()
+#3 [internal function]: Kohana_Controller->execute()
+#4 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Alumno))
+#5 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#6 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#7 D:\xampp\htdocs\alumnos-UTP\index.php(118): Kohana_Request->execute()
+#8 {main} in D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\View.php:295
+2014-12-12 22:56:02 --- CRITICAL: ErrorException [ 2 ]: Missing argument 1 for Controller_Alumno::action_save(), called in D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Controller.php on line 84 and defined ~ APPPATH\classes\Controller\Alumno.php [ 14 ] in D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php:14
+2014-12-12 22:56:02 --- DEBUG: #0 D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php(14): Kohana_Core::error_handler(2, 'Missing argumen...', 'D:\xampp\htdocs...', 14, Array)
+#1 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Controller.php(84): Controller_Alumno->action_save()
+#2 [internal function]: Kohana_Controller->execute()
+#3 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Alumno))
+#4 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 D:\xampp\htdocs\alumnos-UTP\index.php(118): Kohana_Request->execute()
+#7 {main} in D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php:14
+2014-12-12 22:56:38 --- CRITICAL: ErrorException [ 2 ]: Missing argument 1 for Controller_Alumno::action_save(), called in D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Controller.php on line 84 and defined ~ APPPATH\classes\Controller\Alumno.php [ 14 ] in D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php:14
+2014-12-12 22:56:38 --- DEBUG: #0 D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php(14): Kohana_Core::error_handler(2, 'Missing argumen...', 'D:\xampp\htdocs...', 14, Array)
+#1 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Controller.php(84): Controller_Alumno->action_save()
+#2 [internal function]: Kohana_Controller->execute()
+#3 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Alumno))
+#4 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 D:\xampp\htdocs\alumnos-UTP\index.php(118): Kohana_Request->execute()
+#7 {main} in D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php:14
+2014-12-12 23:07:51 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: id ~ APPPATH\classes\Controller\Alumno.php [ 16 ] in D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php:16
+2014-12-12 23:07:51 --- DEBUG: #0 D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php(16): Kohana_Core::error_handler(8, 'Undefined varia...', 'D:\xampp\htdocs...', 16, Array)
+#1 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Controller.php(84): Controller_Alumno->action_registro()
+#2 [internal function]: Kohana_Controller->execute()
+#3 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Alumno))
+#4 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#5 D:\xampp\htdocs\alumnos-UTP\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#6 D:\xampp\htdocs\alumnos-UTP\index.php(118): Kohana_Request->execute()
+#7 {main} in D:\xampp\htdocs\alumnos-UTP\application\classes\Controller\Alumno.php:16

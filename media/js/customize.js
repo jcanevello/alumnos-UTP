@@ -1,6 +1,6 @@
 $(document).ready(function($){
 	
-	$('#btn-save').click(function(e){
+	/*$('#btn-save').click(function(e){
 		
 		e.preventDefault()
 		console.log('wwww')
@@ -15,9 +15,9 @@ $(document).ready(function($){
 			console.log(response)
 			
 		}).fail(function(){
-			alert('Error al guardar datos')
+			alert('Error al enviar datos')
 		})
-	})
+	})*/
 	
 	console.log('ssss')
 })
